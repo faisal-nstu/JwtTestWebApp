@@ -42,6 +42,18 @@ namespace JwtTestWebApp
                 };
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("EnableCORS", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .Build();
+                });
+            });
+
             services.AddMvc();
         }
 
@@ -54,6 +66,8 @@ namespace JwtTestWebApp
             }
 
             app.UseAuthentication();
+
+            app.UseCors("EnableCORS");
 
             app.UseMvc();
         }
