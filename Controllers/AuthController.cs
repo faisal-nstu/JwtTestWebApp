@@ -20,7 +20,7 @@ namespace JwtTestWebApp.Controllers
                 return BadRequest("Invalid client request");
             }
 
-            if (loginModel.UserName == "johndoe" && loginModel.Password == "pass@123")
+            if (loginModel.UserName == "johndoe" && loginModel.Password == "1111")
             {
                 var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@bs23"));
                 var signingCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);

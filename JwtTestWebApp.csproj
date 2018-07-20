@@ -5,13 +5,9 @@
     <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
   </PropertyGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <None Remove="clientapp\e2e\moneylineoddscalculator.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="clientapp\e2e\moneylineoddscalculator.ts" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
